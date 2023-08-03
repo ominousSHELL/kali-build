@@ -22,6 +22,6 @@
     vars:
       TOKEN:  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
       GIT_COMMAND: "git push https://ominousSHELL:{{ TOKEN }}@github.com/ominousSHELL/kali-build.git"
-    shell: "git add . && git commit -m '1.0' && {{ GIT_COMMAND }}"
+    shell: "git add . && git commit -m '1.0' && git push"
     args:
       chdir: /root/kali-build/
