@@ -5,23 +5,23 @@
       - name:
         copy: 
           src: /etc/tmux.conf
-          dest: /root/kali-build/roles/configurations/tmux/files/
+          dest: /home/ominousshell/kali-build/roles/configurations/tmux/files/
       - name: 
         copy:
-          src: /root/.vimrc
-          dest: /root/kali-build/roles/configurations/vim/files/
+          src: /home/ominousshell/.vimrc
+          dest: /home/ominousshell/kali-build/roles/configurations/vim/files/
       - name: 
         copy:
-          src: /root/.zshrc
-          dest: /root/kali-build/roles/configurations/zsh/files/
+          src: /home/ominousshell/.zshrc
+          dest: /home/ominousshell/kali-build/roles/configurations/zsh/files/
       - name: 
         copy:
-          src: /root/.config/dconf/user
-          dest: /root/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf
+          src: /home/ominousshell/.config/dconf/user
+          dest: /home/ominousshell/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf
   - name: Pushing changes to Git repository...
     vars:
       TOKEN:  ""
       GIT_COMMAND: "git push https://ominousSHELL:{{ TOKEN }}@github.com/ominousSHELL/kali-build.git"
     shell: "git add . && git commit -m '1.0' && git push"
     args:
-      chdir: /root/kali-build/
+      chdir: /home/ominousshell/kali-build/
