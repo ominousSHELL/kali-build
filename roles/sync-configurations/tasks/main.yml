@@ -20,7 +20,7 @@
           dest: /root/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf
   - name: Pushing changes to Git repository...
     vars:
-      TOKEN:  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
+      TOKEN:  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
       GIT_COMMAND: "git push https://ominousSHELL:{{ TOKEN }}@github.com/ominousSHELL/kali-build.git"
     shell: "git add . && git commit -m '1.0' && {{ GIT_COMMAND }}"
     args:
