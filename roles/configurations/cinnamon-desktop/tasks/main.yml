@@ -1,0 +1,12 @@
+---
+  - name: Restoring Cinnamon desktop configurations...
+    copy: 
+      src: /home/ominousshell/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf
+      dest: /home/ominousshell/.config/dconf/user
+  - name: Setting motd...
+    copy: 
+      src: /home/ominousshell/kali-build/roles/configurations/cinnamon-desktop/files/motd
+      dest: /etc/motd
+    become: true
+
+

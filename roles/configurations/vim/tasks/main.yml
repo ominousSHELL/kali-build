@@ -1,0 +1,11 @@
+---
+  - name: Installing vim...
+    apt:
+      name: vim
+      state: latest
+  - name: Copying vim configuration file...
+    copy:
+        src: /home/ominousshell/kali-build/roles/configurations/vim/files/.vimrc
+        dest: /home/ominousshell/.vimrc
+    become: true
+

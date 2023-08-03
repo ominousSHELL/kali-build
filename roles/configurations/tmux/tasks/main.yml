@@ -1,0 +1,10 @@
+---
+  - name: Installing Tmux...
+    apt:
+      name: tmux
+      state: present
+  - name: Copying Tmux configuration file...
+    copy:
+      src: /home/ominousshell/kali-build/roles/configurations/tmux/files/tmux.conf
+      dest: /etc/tmux.conf
+    become: true

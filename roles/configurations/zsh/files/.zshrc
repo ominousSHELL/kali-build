@@ -62,7 +62,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 #^Aliases
-#LS
 alias ll='ls -lashF'
 alias la='ls -CAshF'
 alias l='ls -CFhas'
@@ -86,6 +85,7 @@ alias ssh-pass="~/ominousSHELL/scripts/ssh/sshWithPass.sh"
 alias ssh-key="~/ominousSHELL/scripts/ssh/sshWithKey.sh"
 
 #^FFUF
+alias ffufH="ffuf -u http://example.com -w /opt/wordlist.txt 'Host: FUZZ.example.com'"
 #$FUFF
 
 #^NMAP
@@ -96,19 +96,14 @@ alias nmapVERSIONS-udp="~/ominousSHELL/scripts/nmap/nmapVERSIONS-udp.sh $1"
 #$NMAP
 
 #COMMIX
-#$COMMIX
 
 #^SQLMAP
-alias sqlmapT='sqlmap-r $1 --batch --threads=3 --level=5 --risk=3 --alert='echo -e "\e[1;32mSQL INJECTION FOUND!!!!!....\e[0m"' --flush-session --dbms MYSQL --tamper=charencode.py'
+alias sqlmapT='sqlmap -r $1 --batch --threads=3 --level=5 --risk=3 --alert='echo -e "\e[1;32mSQL INJECTION FOUND!!!!!....\e[0m"' --flush-session --dbms MYSQL --tamper=charencode.py'
 alias sqlmapR="sqlmap $1 --batch --curent-user --roles --threads=3 --level=5 --risk=3 --dbms MYSQL"
 alias sqlmapP="sqlmap $1 --batch --file-dest=/tmp/userkit.sh --file-write=userkit.sh os-cmd='bash userkit.sh' --threads=3 --level=5 --risk=3 --dbms MYSQL"
 alias sqlmapE="sqlmap $1 --batch --file-read=/opt/flag.txt --os-shell threads=3 --level=5 --risk=3 --dbms MYSQL"
 alias sqlmapD="sqlmap $1 --batch --dbs --count --passwords --dump --threads=10 --level=5 --risk=3 --dbms MYSQL"
 #$SQLMAP
-
-#^OMINOUS DJANGO
-alias djangodb-backup="~/ominousSHELL/scripts/dbs/django/backup.sh"
-#$OMINOUS DJANGO
 
 
 #NETCAT PORTS
@@ -120,6 +115,5 @@ done
 alias ominous-backup="~/ominousSHELL/scripts/ominous-backup.sh"
 alias ominous-gen="~/ominousSHELL/ominous-gen/main.py"
 #$ominousSHELL
-
 
 #$Aliases
