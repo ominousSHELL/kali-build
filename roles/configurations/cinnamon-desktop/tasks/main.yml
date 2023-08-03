@@ -1,4 +1,8 @@
 ---
+  - name: Installing Cinnamon desktop...
+    apt:
+      name: cinnamon-desktop
+      state: present
   - name: Restoring Cinnamon desktop configurations...
     copy: 
       src: /home/ominousshell/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf
