@@ -114,6 +114,10 @@ done
 #^ominousSHELL
 alias ominous-backup="~/ominousSHELL/scripts/ominous-backup.sh"
 alias ominous-gen="~/ominousSHELL/ominous-gen/main.py"
+alias kali-backup="sudo ansible-playbook /home/ominousshell/kali-build/kali-backup.yml"
+alias log-out="cinnamon-session-quit --logout --force"
+alias sudo="sudo "
+
 #$ominousSHELL
 
 #$Aliases

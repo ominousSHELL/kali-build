@@ -4,8 +4,8 @@
       name: zsh
       state: latest
   - name: Setting Zsh as default shell...
-    command: chsh -s /bin/zsh
-  - name: Copying zsh configuration file...
+    shell: echo 'o?0000?1001?s' | su ominousshell -c 'chsh -s /bin/zsh'
+  - name: Copying Zsh configuration file...
     copy:
         src: /home/ominousshell/kali-build/roles/configurations/zsh/files/.zshrc
         dest: /home/ominousshell/.zshrc

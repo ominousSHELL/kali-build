@@ -1,0 +1,31 @@
+---
+  - name: Synchronizing configuration files...
+    hosts: localhost
+    tasks:
+      - name: Backuping up Cinnamon desktop configuration...
+        shell: su ominousshell -c "dconf dump / > /home/ominousshell/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf"
+      - name: Backing up Tmux configuration...
+        copy:
+          src: /etc/tmux.conf
+          dest: /home/ominousshell/kali-build/roles/configurations/tmux/files/
+      - name: Backuping Zsh configuraton...
+        copy:
+          src: /home/ominousshell/.zshrc
+          dest: /home/ominousshell/kali-build/roles/configurations/zsh/files/
+      - name: Backuping Vim configuraton...
+        copy:
+          src: /home/ominousshell/.vimrc
+          dest: /home/ominousshell/kali-build/roles/configurations/vim/files/
+      - name: Copying Sudoers configuration...
+        copy: 
+          src: /etc/sudoers
+          dest: /home/ominousshell/kali-build/roles/configurations/cinnamon-desktop/files/sudoers
+      - name: Pushing changes to git repository...
+        shell: |
+          git config --global user.email "ominousshellotto@proton.me"
+          git add .
+          git commit -m "1.0" 
+          git push
+        args:
+          chdir: /home/ominousshell/kali-build/
+    become: true
