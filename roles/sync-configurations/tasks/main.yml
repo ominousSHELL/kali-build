@@ -1,23 +1,27 @@
 ---
-  # Variables
-  TOKEN:  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
   - name: Copying configurations files...
+  # Variables
     block:
       - name:
         copy: 
           src: /etc/tmux.conf
           dest: /root/kali-build/roles/configurations/tmux/files/
-      - name:
+      - name: 
         copy:
           src: /root/.vimrc
           dest: /root/kali-build/roles/configurations/vim/files/
-      - name:
+      - name: 
         copy:
           src: /root/.zshrc
           dest: /root/kali-build/roles/configurations/zsh/files/
-      - name:
+      - name: 
         copy:
           src: /root/.config/dconf/user
-          dest: /root/kali-build/roles/configurations/cinnamon-desktop/files/
-  - name: Pushing changes to Git repository
-    command: "git add . && git "
+          dest: /root/kali-build/roles/configurations/cinnamon-desktop/files/settings.dconf
+  - name: Pushing changes to Git repository...
+    vars:
+      TOKEN:  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
+      GIT_COMMAND: "git push https://ominousSHELL:{{ TOKEN }}@github.com/ominousSHELL/kali-build.git"
+    shell: "git add . && git commit -m '1.0' && {{ GIT_COMMAND }}"
+    args:
+      chdir: /root/kali-build/
