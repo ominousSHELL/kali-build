@@ -2,7 +2,7 @@
   - name: "Setting up Kali Linux..."
     hosts: localhost
     roles:
-      - roles/configurations/cinnamon-desktop
+      - roles/configurations/kde-desktop
       - roles/configurations/tmux
       - roles/configurations/vim
       - roles/configurations/zsh

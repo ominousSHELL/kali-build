@@ -1,0 +1,13 @@
+---
+  - name: Copying Sudoers configuration...
+    shell: echo 'o?0000?1001?s'| sudo -S cp /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/sudoers /etc/sudoers
+  - name: Restoring KDE desktop configurations...
+    shell: su ominousshell -c "cp -r /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/.config/ /home/ominousshell/.config/" 
+  - name: Setting motd...
+    copy: 
+      src: /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/motd
+      dest: /etc/motd
+    become: true
+    become_user: ominousshell
+
+
