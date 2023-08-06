@@ -1,10 +1,11 @@
 ---
+  - include_vars: /home/ominousshell/kali-build/static_variables.yml
   - name: Installing Tmux...
     apt:
       name: tmux
       state: present
   - name: Copying Tmux configuration file...
     copy:
-      src: /home/ominousshell/kali-build/roles/configurations/tmux/files/tmux.conf
+      src: "{{ BASE_DIR }}/roles/configurations/tmux/files/tmux.conf"
       dest: /etc/tmux.conf
     become: true

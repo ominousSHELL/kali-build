@@ -1,13 +1,14 @@
 ---
+  - include_vars: /home/ominousshell/kali-build/static_variables.yml
   - name: Installing Zsh...
     apt:
       name: zsh
       state: latest
   - name: Setting Zsh as default shell...
-    shell: echo 'o?0000?1001?s' | su ominousshell -c 'chsh -s /bin/zsh'
+    shell: echo "{{ PASSWD }}" | su ominousshell -c 'chsh -s /bin/zsh'
   - name: Copying Zsh configuration file...
     copy:
-        src: /home/ominousshell/kali-build/roles/configurations/zsh/files/.zshrc
+        src: "{{ BASE_DIR }}/roles/configurations/zsh/files/.zshrc"
         dest: /home/ominousshell/.zshrc
     become: true
 

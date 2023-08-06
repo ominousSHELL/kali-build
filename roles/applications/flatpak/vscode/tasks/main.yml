@@ -1,0 +1,3 @@
+---
+  - name: Installing Visual Studio Code...
+    shell: flatpak install flathub com.visualstudio.code

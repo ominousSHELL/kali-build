@@ -1,0 +1,3 @@
+---
+  - name: Installing Obsidian...
+    shell: flatpak install flathub md.obsidian.Obsidian

@@ -2,7 +2,13 @@
   - name: "Setting up Kali Linux..."
     hosts: localhost
     roles:
+      #Configurations
       - roles/configurations/kde-desktop
       - roles/configurations/tmux
       - roles/configurations/vim
       - roles/configurations/zsh
+      #Applications
+      - roles/applications/flatpak/vscode
+      - roles/applications/flatpak/obsidian
+      - roles/applications/flatpak/brave
+
