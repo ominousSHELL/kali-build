@@ -1,7 +1,7 @@
 ---
   - include_vars: /home/ominousshell/kali-build/static_variables.yml
   - name: Copying Sudoers configuration...
-    shell: echo "{{ PASSWD }}"| sudo -S "cp {{ BASE_DIR }}/roles/configurations/kde-desktop/files/sudoers /etc/sudoers"
+    shell: echo "{{ PASSWD }}"| sudo -S cp "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/sudoers" /etc/sudoers
   - name: Restoring KDE desktop configurations...
     shell: su ominousshell -c "cp -r {{ BASE_DIR }}/roles/configurations/kde-desktop/files/.config/ /home/ominousshell/.config/" 
   - name: Setting motd...
@@ -9,6 +9,5 @@
       src: "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/motd"
       dest: /etc/motd
     become: true
-    become_user: ominousshell
 
 

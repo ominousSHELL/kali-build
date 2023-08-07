@@ -5,7 +5,7 @@
       name: zsh
       state: latest
   - name: Setting Zsh as default shell...
-    shell: echo "{{ PASSWD }}" | su ominousshell -c 'chsh -s /bin/zsh'
+    shell: echo "{{ PASSWD }}" | sudo -Su ominousshell chsh -s /bin/zsh
   - name: Copying Zsh configuration file...
     copy:
         src: "{{ BASE_DIR }}/roles/configurations/zsh/files/.zshrc"
