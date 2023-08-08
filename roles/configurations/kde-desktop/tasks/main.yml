@@ -3,7 +3,8 @@
   - name: Copying Sudoers configuration...
     shell: echo "{{ PASSWD }}"| sudo -S cp "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/sudoers" /etc/sudoers
   - name: Restoring KDE desktop configurations...
-    shell: su ominousshell -c "cp -r {{ BASE_DIR }}/roles/configurations/kde-desktop/files/.config/ /home/ominousshell/.config/" 
+    shell: |
+      find ~/.config/ ! -path '*mozilla*' ! -path '*cherrytree*' ! -path '*powershell*' ! -path '*dconf*' ! -path '*app*' > kde-configuratin.lst
   - name: Setting motd...
     copy: 
       src: "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/motd"
