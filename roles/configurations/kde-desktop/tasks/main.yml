@@ -4,7 +4,7 @@
     shell: echo "{{ PASSWD }}"| sudo -S cp "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/sudoers" /etc/sudoers
   - name: Restoring KDE desktop configurations...
     shell: |
-      tar --strip-components=3 -xvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" /home/ominousshell/.config
+      tar -xvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" -C /home/ominousshell/.config
   - name: Setting motd...
     copy: 
       src: "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/motd"
