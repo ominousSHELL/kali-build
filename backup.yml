@@ -17,7 +17,7 @@
         copy:
           src: /home/ominousshell/.vimrc
           dest: /home/ominousshell/kali-build/roles/configurations/vim/files/
-      - name: Copying Sudoers configuration...
+      - name: Backing up Sudoers configuration...
         copy: 
           src: /etc/sudoers
           dest: /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/sudoers
