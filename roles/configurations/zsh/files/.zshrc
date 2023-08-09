@@ -50,8 +50,13 @@ bindkey '^[[Z' undo
 bindkey '^U' backward-kill-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-#$Key binds##
+bindkey -v
 
+#Enable Vi Mode in terminal
+export INSERT_MODE_INDICATOR="%F{cyan}+%f"
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
+#$Key binds##
 
 #^Styles, customzation and functionality
 autoload -Uz compinit; compinit;
