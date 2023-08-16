@@ -1,8 +1,12 @@
 ---
   - name: Installing Flatpak...
     shell: |
+      sudo apt update
       sudo apt install -y flatpak 
       sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     become: true
   - name: Installing Visual Studio Code...
-    shell: flatpak install -y --noninteractive flathub com.visualstudio.code
+    shell: | 
+      flatpak install -y --noninteractive flathub com.visualstudio.code
+      flatpak install -y --noninteractive flathub org.freedesktop.Sdk.Extension.openjdk17
+
