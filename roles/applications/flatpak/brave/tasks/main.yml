@@ -1,3 +1,3 @@
 ---
   - name: Installing Brave...
-    shell: flatpak install -y --noninteractive flathub com.brave.Browser
+    shell: flatpak install -y flathub com.brave.Browser

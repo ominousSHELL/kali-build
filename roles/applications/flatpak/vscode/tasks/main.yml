@@ -5,8 +5,10 @@
       sudo apt install -y flatpak 
       sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     become: true
+    become_user: ominousshell
   - name: Installing Visual Studio Code...
     shell: | 
-      flatpak install -y --noninteractive flathub com.visualstudio.code
-      flatpak install -y --noninteractive flathub org.freedesktop.Sdk.Extension.openjdk17
+      flatpak install -y flathub com.visualstudio.code && flatpak install -y flathub org.freedesktop.Sdk.Extension.openjdk17
+    become: true
+    become_user: ominousshell
 

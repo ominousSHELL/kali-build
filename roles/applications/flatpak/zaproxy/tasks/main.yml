@@ -1,3 +1,3 @@
 ---
   - name: Installing Zaproxy...
-    shell: flatpak install -y --noninteractive flathub org.zaproxy.ZAP
+    shell: flatpak install -y flathub org.zaproxy.ZAP
