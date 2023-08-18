@@ -5,4 +5,3 @@
       pkg: "{{ item }}"
       state: latest
     loop: "{{ PACKAGES }}"  
-  become: true
