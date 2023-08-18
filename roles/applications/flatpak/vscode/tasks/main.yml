@@ -1,14 +1,13 @@
 ---
-  - name: Installing Flatpak...
-    shell: |
-      sudo apt update
-      sudo apt install -y flatpak 
-      sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    become: true
-    become_user: ominousshell
+  - include_vars: vars/main.yml
   - name: Installing Visual Studio Code...
-    shell: | 
-      flatpak install -y flathub com.visualstudio.code && flatpak install -y flathub org.freedesktop.Sdk.Extension.openjdk17
+    shell: flatpak install -y flathub com.visualstudio.code
+
+  - name: "Installing SDK Extension: {{ item }}..."
+    shell: |
+      flatpak install -y flathub "{{ item }}"
+    loop: "{{ SDK_EXTENSIONS }}"
+
     become: true
     become_user: ominousshell
 

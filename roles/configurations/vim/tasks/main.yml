@@ -4,7 +4,7 @@
     apt:
       name: vim
       state: latest
-  - name: Copying Vim configuration file...
+  - name: Setting Vim configurations...
     copy:
         src: "{{ BASE_DIR }}/roles/configurations/vim/files/.vimrc"
         dest: /home/ominousshell/.vimrc

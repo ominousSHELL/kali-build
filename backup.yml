@@ -1,26 +1,18 @@
 ---
-  - name: Backing up configuration files...
+  - name: Backing up Kali Linux...
     hosts: localhost
-    tasks:
-      - include_vars: /home/ominousshell/kali-build/static_variables.yml
-      - name: Backuping up KDE desktop configuration...
-        shell: tar --exclude='*mozilla*' --exclude='*cherrytree*' --exclude='*powershell*' --exclude='*dconf*' --exclude='*app*' -C /home/ominousshell/.config/ -cvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" .
-      - name: Backing up Tmux configuration...
-        copy:
-          src: /etc/tmux.conf
-          dest: /home/ominousshell/kali-build/roles/configurations/tmux/files/
-      - name: Backuping Zsh configuraton...
-        copy:
-          src: /home/ominousshell/.zshrc
-          dest: /home/ominousshell/kali-build/roles/configurations/zsh/files/
-      - name: Backuping Vim configuraton...
-        copy:
-          src: /home/ominousshell/.vimrc
-          dest: /home/ominousshell/kali-build/roles/configurations/vim/files/
-      - name: Backing up Sudoers configuration...
-        copy: 
-          src: /etc/sudoers
-          dest: /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/sudoers
+    roles:
+      #Configurations
+      - roles/backup/configurations/kde-desktop
+      - roles/backup/configurations/tmux
+      - roles/backup/configurations/zsh
+      - roles/backup/configurations/vim
+      - roles/backup/configurations/sudo
+      #Applications
+      - roles/backup/applications/flatpak/vscode
+    become: true
+
+  - tasks:
       - name: Pushing changes to git repository...
         shell: |
           git config --global user.email "ominousshellotto@proton.me"
@@ -29,4 +21,3 @@
           git push
         args:
           chdir: /home/ominousshell/kali-build/
-    become: true

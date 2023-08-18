@@ -1,0 +1,5 @@
+---
+  - include_vars: /home/ominousshell/kali-build/static_variables.yml
+  - name: Backuping up KDE Desktop configuration...
+    shell: tar --exclude='*mozilla*' --exclude='*cherrytree*' --exclude='*powershell*' --exclude='*dconf*' --exclude='*app*' -C /home/ominousshell/.config/ -cvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" .
+

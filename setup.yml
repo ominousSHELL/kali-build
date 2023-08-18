@@ -4,6 +4,8 @@
     roles:
       #Configurations
       - roles/configurations/kde-desktop
+      - roles/configurations/sudo
+      - roles/configurations/motd
       - roles/configurations/tmux
       - roles/configurations/vim
       - roles/configurations/zsh

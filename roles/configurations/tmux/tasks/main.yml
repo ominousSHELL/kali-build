@@ -4,7 +4,7 @@
     apt:
       name: tmux
       state: present
-  - name: Copying Tmux configuration file...
+  - name: Setting Tmux configurations...
     copy:
       src: "{{ BASE_DIR }}/roles/configurations/tmux/files/tmux.conf"
       dest: /etc/tmux.conf

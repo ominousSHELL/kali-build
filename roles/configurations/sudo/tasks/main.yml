@@ -1,0 +1,4 @@
+---
+  - include_vars: /home/ominousshell/kali-build/static_variables.yml
+  - name: Setting Sudo configuration...
+    shell: echo "{{ PASSWD }}" | sudo -S cp "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/sudoers" /etc/sudoers
