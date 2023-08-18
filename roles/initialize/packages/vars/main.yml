@@ -1,0 +1,7 @@
+---
+PACKAGES: [ 
+  "zsh",
+  "vim",
+  "tmux",
+  "tree",
+]

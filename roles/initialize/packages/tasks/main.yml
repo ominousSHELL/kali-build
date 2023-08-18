@@ -1,0 +1,8 @@
+---
+  - include_vars: vars/main.yml
+  - name: Initializing packages...
+    apt:
+      pkg: "{{ item }}"
+      state: latest
+    loop: "{{ PACKAGES }}"  
+  become: true

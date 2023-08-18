@@ -2,6 +2,8 @@
   - name: "Setting up Kali Linux..."
     hosts: localhost
     roles:
+      #Initializations
+      - roles/initialize/packages
       #Configurations
       - roles/configurations/kde-desktop
       - roles/configurations/sudo
