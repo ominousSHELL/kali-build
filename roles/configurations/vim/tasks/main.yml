@@ -1,9 +1,5 @@
 ---
   - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Installing Vim...
-    apt:
-      name: vim
-      state: latest
   - name: Setting Vim configurations...
     copy:
         src: "{{ BASE_DIR }}/roles/configurations/vim/files/.vimrc"
