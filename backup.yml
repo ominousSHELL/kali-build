@@ -9,10 +9,11 @@
       - roles/backup/configurations/vim
       - roles/backup/configurations/sudo
       #Applications
-      - roles/backup/applications/flatpak/vscode
     become: true
 
-  - tasks:
+  - name: 
+    hosts: localhost
+    tasks:
       - name: Pushing changes to git repository...
         shell: |
           git config --global user.email "ominousshellotto@proton.me"
