@@ -3,4 +3,4 @@
   - name: Backing up Tmux configuration...
     copy:
       src: /etc/tmux.conf
-      dest: "{{ BASE_DIR }}roles/configurations/tmux/files/"
+      dest: "{{ BASE_DIR }}/roles/configurations/tmux/files/"
