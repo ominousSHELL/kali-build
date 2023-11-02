@@ -3,4 +3,4 @@
   - name: Backing up Vim configuraton...
     copy:
       src: /home/ominousshell/.vimrc
-      dest: "{{ BASE_DIR }}roles/configurations/vim/files/"
+      dest: "{{ BASE_DIR }}/roles/configurations/vim/files/"
