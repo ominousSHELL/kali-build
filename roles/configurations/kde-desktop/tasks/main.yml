@@ -1,6 +1,10 @@
 ---
   - include_vars: /home/ominousshell/kali-build/static_variables.yml
   - name: Setting KDE Desktop configurations...
-    shell: tar -xvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" -C /home/ominousshell/.config
+    #shell: tar -xvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" -C /home/ominousshell/.config
+    shell: |
+      /home/ominousshell/.local/bin/konsave -r kde-desktop
+      /home/ominousshell/.local/bin/konsave -i /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/kde-desktop.knsv
+      /home/ominousshell/.local/bin/konsave -a kde-desktop
 
 
