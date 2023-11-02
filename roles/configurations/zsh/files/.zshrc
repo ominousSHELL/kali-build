@@ -170,7 +170,7 @@ done
 #^ominousSHELL
 alias ominous-backup="~/ominousSHELL/scripts/ominous-backup.sh"
 alias ominous-gen="~/ominousSHELL/ominous-gen/main.py"
-alias kali-backup="sudo ansible-playbook /home/ominousshell/kali-build/backup.yml"
+alias kali-backup="sudo -E ansible-playbook /home/ominousshell/kali-build/backup.yml"
 alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"
 alias sudo="sudo "
 
