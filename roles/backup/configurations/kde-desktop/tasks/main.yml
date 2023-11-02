@@ -5,4 +5,5 @@
     shell: |
       /home/ominousshell/.local/bin/konsave -s kde-desktop
       /home/ominousshell/.local/bin/konsave -e kde-desktop -d /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/
+      sudo chown -R ominousshell:ominousshell /home/ominousshell/.config/
 
