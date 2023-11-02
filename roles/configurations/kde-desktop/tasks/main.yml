@@ -6,5 +6,6 @@
       /home/ominousshell/.local/bin/konsave -r kde-desktop
       /home/ominousshell/.local/bin/konsave -i /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/kde-desktop.knsv
       /home/ominousshell/.local/bin/konsave -a kde-desktop
+      sudo chown -R ominousshell:ominousshell /home/ominousshell/.config
 
 
