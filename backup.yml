@@ -4,7 +4,7 @@
     roles:
       #Configurations
       #- roles/backup/configurations/kde-desktop
-      - roles/backup/configurations/tmux
+      #- roles/backup/configurations/tmux
       - roles/backup/configurations/zsh
       - roles/backup/configurations/vim
       - roles/backup/configurations/sudo
