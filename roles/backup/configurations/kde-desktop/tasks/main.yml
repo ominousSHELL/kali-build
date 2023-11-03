@@ -4,6 +4,7 @@
     #shell: tar --exclude='*mozilla*' --exclude='*cherrytree*' --exclude='*powershell*' --exclude='*dconf*' --exclude='*app*' -C /home/ominousshell/.config/ -cvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" .
     shell: |
       rm -rf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-desktop.knsv"
+      /home/ominousshell/.local/bin/konsave -r kde-desktop
       /home/ominousshell/.local/bin/konsave -s kde-desktop
       /home/ominousshell/.local/bin/konsave -e kde-desktop -d "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/"
       sudo chown -R ominousshell:ominousshell /home/ominousshell/.config/
