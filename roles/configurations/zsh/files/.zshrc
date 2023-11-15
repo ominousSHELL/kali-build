@@ -51,6 +51,8 @@ bindkey '^U' backward-kill-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey '^R' history-incremental-search-backward
+bindkey '5~' kill-word
+bindkey '^[[3;5~' kill-word
 
 #VIM Mode in Terminal
 export INSERT_MODE_INDICATOR="%F{cyan}+%f"
