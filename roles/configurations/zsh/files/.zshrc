@@ -48,16 +48,18 @@ export LS_COLORS='fi=00;36:rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;
 #^Key binds
 bindkey '^[[Z' undo
 bindkey '^U' backward-kill-line
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
 bindkey '^R' history-incremental-search-backward
-bindkey '5~' kill-word
+bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
 
 #VIM Mode in Terminal
 export INSERT_MODE_INDICATOR="%F{cyan}+%f"
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins "^A" beginning-of-line
+bindkey -M viins "^E" end-of-line
 bindkey -v
 #$Key binds##
 
@@ -174,7 +176,7 @@ alias ominous-backup="~/ominousSHELL/scripts/ominous-backup.sh"
 alias ominous-gen="~/ominousSHELL/ominous-gen/main.py"
 alias kali-backup="sudo -E ansible-playbook /home/ominousshell/kali-build/backup.yml"
 alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"
-alias sudo="sudo "
+alias sudo="sudo -E"
 
 #$ominousSHELL
 
