@@ -129,9 +129,15 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
+
 #Timer
 alias timer='startTimer'
+
 #TMUX
+if [ -z "$TMUX" ]; then
+    tmux attach || tmux new-session
+fi
+alias tmux="~/ominousSHELL/scripts/tmux/new-session.sh"
 alias bg-panes="~/ominousSHELL/scripts/tmux/bg-panes.sh"
 alias ctf-panes="~/ominousSHELL/scripts/tmux/ctf-panes.sh"
 alias remove-panes="~/ominousSHELL/scripts/tmux/remove-panes.sh"
