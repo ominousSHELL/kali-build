@@ -12,7 +12,6 @@
       - roles/configurations/vim
       - roles/configurations/zsh
       #Applications
-      #- roles/applications/flatpak/vscode
-      - roles/applications/flatpak/obsidian
-      - roles/applications/flatpak/brave
+      - roles/applications/setup-deb
+      - roles/applications/setup-flatpaks 
 

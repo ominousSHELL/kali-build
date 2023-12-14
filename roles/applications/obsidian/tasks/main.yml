@@ -1,0 +1,3 @@
+---
+  - name: Installing Obsidian...
+    shell: apt install obsidian

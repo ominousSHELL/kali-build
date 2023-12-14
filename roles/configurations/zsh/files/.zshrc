@@ -3,30 +3,7 @@ prompt_symbol=㉿
 interface_name="lo"
 interface=$(ip addr show dev $interface_name up | grep -o '^[0-9]*:[[:space:]][a-z0-9_]*:' |awk -F: '{print $2}' | sed s/\ //g)
 ip=$(ip addr show dev $interface up | grep -o 'inet [0-9.]*' |awk '{print $2}')
-PROMPT=$'%F{cyan}┌──[%B${interface}%b]-[%B${ip}%b]-[%*]-(%B%F{blue}%n'$prompt_symbol$'%m%b%F{cyan})--[%B%F{cyan}%(6~.%-1~/…/%4~.%5~)%b%F{cyan}]\n└─%B%F{blue}%%%f%b%F{cyan} '
-
-#^Functions
-#^Timer
-function startTimer {
-	if [[ $1 == "" ]]; then
-		echo "Usage: timer [min]"
-		return
-	fi
-	#Check if tmux is running
-	tmux list-sessions 2>&1 >/dev/null
-	if [[ $? == 1 ]];then
-		echo "Tmux not running..."
-		echo "Exiting..."
-		return
-	fi
-
-	echo "Starting timer for $1 minutes..."
-	python ~/ominousSHELL/scripts/python/timer.py $1&disown
-}
-#$Timer
-
-#$Functions
-
+PROMPT=$'%F{cyan}┌──[%B${interface}%b]-[%B${ip}%b]-[$(date "+%F---%T")]-(%B%F{blue}%n'$prompt_symbol$'%m%b%F{cyan})--[%B%F{cyan}%(6~.%-1~/…/%4~.%5~)%b%F{cyan}]\n└─%B%F{blue}%%%f%b%F{cyan} '
 
 #^Options
 setopt correct #auto correct spelling mistakes
@@ -52,13 +29,6 @@ export LS_COLORS='fi=00;36:rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;
 
 
 #^Key binds
-bindkey '^[[Z' undo
-bindkey '^U' backward-kill-line
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-bindkey '^R' history-incremental-search-backward
-bindkey '^H' backward-kill-word
-bindkey '^[[3;5~' kill-word
 
 #VIM Mode in Terminal
 export INSERT_MODE_INDICATOR="%F{cyan}+%f"
@@ -66,7 +36,17 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins "^A" beginning-of-line
 bindkey -M viins "^E" end-of-line
+bindkey -M vicmd 'x' backward-delete-char
+bindkey -M vicmd 'X' vi-delete-char
 bindkey -v
+
+bindkey '^[[Z' undo
+bindkey '^U' backward-kill-line
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^R' history-incremental-search-backward
+bindkey '^H' backward-kill-word
+bindkey '^[[3;5~' kill-word
 #$Key binds##
 
 #^Styles, customzation and functionality
@@ -180,6 +160,10 @@ for i in $PORT; do
 	alias $i="ncat -lnp $i"
 done
 #^ominousSHELL
+alias ominousshell-up="~/ominousSHELL/scripts/docker/ominousshell-up.sh"
+alias ominousshell-down="~/ominousSHELL/scripts/docker/ominousshell-down.sh"
+alias ominousshell-backup="~/ominousSHELL/scripts/docker/ominousshell-backup.sh"
+alias ominousshell-restore="~/ominousSHELL/scripts/docker/ominousshell-restore.sh"
 alias ominous-backup="~/ominousSHELL/scripts/ominous-backup.sh"
 alias ominous-gen="~/ominousSHELL/ominous-gen/main.py"
 alias kali-backup="sudo -E ansible-playbook /home/ominousshell/kali-build/backup.yml"
@@ -192,3 +176,25 @@ alias sudo="sudo -E "
 if [ -z "$TMUX" ]; then
     tmux
 fi
+
+#^Functions
+#^Timer
+function startTimer {
+	if [[ $1 == "" ]]; then
+		echo "Usage: timer [min]"
+		return
+	fi
+	#Check if tmux is running
+	tmux list-sessions 2>&1 >/dev/null
+	if [[ $? == 1 ]];then
+		echo "Tmux not running..."
+		echo "Exiting..."
+		return
+	fi
+
+	echo "Starting timer for $1 minutes..."
+	python ~/ominousSHELL/scripts/python/timer.py $1&disown
+}
+#$Timer
+
+#$Functions

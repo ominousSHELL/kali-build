@@ -1,0 +1,5 @@
+---
+  - include_vars: vars/main.yml
+  - name: Installing "{{ item }}"...
+    shell: flatpak install -y "{{ item }}"
+    loop: "{{ FLATPAKS }}"  
