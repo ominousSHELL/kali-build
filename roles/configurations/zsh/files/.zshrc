@@ -1,6 +1,6 @@
 #Prompt
 prompt_symbol=㉿
-interface_name="lo"
+interface_name="eth0"
 interface=$(ip addr show dev $interface_name up | grep -o '^[0-9]*:[[:space:]][a-z0-9_]*:' |awk -F: '{print $2}' | sed s/\ //g)
 ip=$(ip addr show dev $interface up | grep -o 'inet [0-9.]*' |awk '{print $2}')
 PROMPT=$'%F{cyan}┌──[%B${interface}%b]-[%B${ip}%b]-[$(date "+%F---%T")]-(%B%F{blue}%n'$prompt_symbol$'%m%b%F{cyan})--[%B%F{cyan}%(6~.%-1~/…/%4~.%5~)%b%F{cyan}]\n└─%B%F{blue}%%%f%b%F{cyan} '
@@ -159,12 +159,14 @@ PORT=({1024..9100})
 for i in $PORT; do
 	alias $i="ncat -lnp $i"
 done
+
+
 #^ominousSHELL
 alias ominousshell-up="~/ominousSHELL/scripts/docker/ominousshell-up.sh"
 alias ominousshell-down="~/ominousSHELL/scripts/docker/ominousshell-down.sh"
-alias ominousshell-backup="~/ominousSHELL/scripts/docker/ominousshell-backup.sh"
-alias ominousshell-restore="~/ominousSHELL/scripts/docker/ominousshell-restore.sh"
-alias ominous-backup="~/ominousSHELL/scripts/ominous-backup.sh"
+alias ominousshell-backup-project="~/ominousSHELL/scripts/docker/ominousshell-backup-project.sh"
+alias ominousshell-restore-project="~/ominousSHELL/scripts/docker/ominousshell-restore-project.sh"
+alias ominousshell-backup="~/ominousSHELL/scripts/ominousshell-backup.sh"
 alias ominous-gen="~/ominousSHELL/ominous-gen/main.py"
 alias kali-backup="sudo -E ansible-playbook /home/ominousshell/kali-build/backup.yml"
 alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"

@@ -3,6 +3,7 @@
   - name: Setting KDE Desktop configurations...
     #shell: tar -xvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" -C /home/ominousshell/.config
     shell: |
+      pip install konsave
       /home/ominousshell/.local/bin/konsave -r kde-desktop
       /home/ominousshell/.local/bin/konsave -i "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-desktop.knsv"
       /home/ominousshell/.local/bin/konsave -a kde-desktop

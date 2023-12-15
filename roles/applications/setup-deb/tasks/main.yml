@@ -1,6 +1,6 @@
 ---
   - include_vars: vars/main.yml
-  - name: Installing "{{ item }}"...
+  - name: Installing Applications [DEB]...
     apt:
       pkg: "{{ item }}"
       state: latest

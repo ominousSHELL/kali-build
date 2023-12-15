@@ -14,6 +14,8 @@
   - name: 
     hosts: localhost
     tasks:
+      - name: Backing up 'kali-build' to SSD...
+        shell: cp -r /home/ominousshell/kali-build/ /media/backup
       - name: Pushing changes to git repository...
         shell: |
           git config --global user.email "ominousshellotto@proton.me"

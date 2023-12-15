@@ -1,6 +1,5 @@
 ---
 PACKAGES : [
-  "obsidian",
   "docker.io",
   "docker-compose"
 ]
