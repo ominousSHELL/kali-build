@@ -1,6 +1,5 @@
 ---
-  - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Backing up Vim configuraton...
+  - name: Backing up vim configuraton...
     copy:
       src: /home/ominousshell/.vimrc
-      dest: "{{ BASE_DIR }}/roles/configurations/vim/files/"
+      dest: /home/ominousshell/kali-build/roles/configurations/vim/files/

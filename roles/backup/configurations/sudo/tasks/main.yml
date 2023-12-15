@@ -1,7 +1,6 @@
 ---
-  - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Backing up Sudo configuration...
+  - name: Backing up sudo configuration...
     copy:
       src: /etc/sudoers
-      dest: "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/sudoers"
+      dest: /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/sudoers
 

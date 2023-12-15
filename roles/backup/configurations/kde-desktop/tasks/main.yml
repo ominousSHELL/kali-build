@@ -1,11 +1,12 @@
 ---
-  - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Backuping up KDE Desktop configuration...
-    #shell: tar --exclude='*mozilla*' --exclude='*cherrytree*' --exclude='*powershell*' --exclude='*dconf*' --exclude='*app*' -C /home/ominousshell/.config/ -cvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" .
+  - name: Backing up KDE Plasma configuration...
     shell: |
-      rm -rf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-desktop.knsv"
-      /home/ominousshell/.local/bin/konsave -r kde-desktop
-      /home/ominousshell/.local/bin/konsave -s kde-desktop
-      /home/ominousshell/.local/bin/konsave -e kde-desktop -d "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/"
+      rm -rf /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/kde-desktop.knsv
+      konsave -r kde-desktop
+      konsave -s kde-desktop
+      konsave -e kde-desktop -d /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/
       sudo chown -R ominousshell:ominousshell /home/ominousshell/.config/
 
+      
+#Backup command      
+#shell: tar --exclude='*mozilla*' --exclude='*cherrytree*' --exclude='*powershell*' --exclude='*dconf*' --exclude='*app*' -C /home/ominousshell/.config/ -cvJf "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/kde-configurations.tar.xz" .

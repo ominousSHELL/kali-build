@@ -13,5 +13,5 @@
       - roles/configurations/zsh
       #Applications
       - roles/applications/setup-deb
-      - roles/applications/setup-flatpaks 
+      #- roles/applications/setup-flatpaks 
 

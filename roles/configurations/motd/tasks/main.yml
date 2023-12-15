@@ -1,7 +1,6 @@
 ---
-  - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Setting Motd configurations...
+  - name: Configuring motd...
     copy:
-      src: "{{ BASE_DIR }}/roles/configurations/kde-desktop/files/motd"
+      src: /home/ominousshell/kali-build/roles/configurations/motd/files/motd
       dest: /etc/motd
     become: true

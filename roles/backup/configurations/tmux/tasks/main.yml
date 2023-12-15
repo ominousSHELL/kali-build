@@ -1,6 +1,5 @@
 ---
-  - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Backing up Tmux configuration...
+  - name: Backing up tmux configuration...
     copy:
       src: /etc/tmux.conf
-      dest: "{{ BASE_DIR }}/roles/configurations/tmux/files/"
+      dest: /home/ominousshell/kali-build/roles/configurations/tmux/files/

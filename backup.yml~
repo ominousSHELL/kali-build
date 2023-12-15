@@ -15,17 +15,12 @@
     hosts: localhost
     tasks:
       - name: Backing up 'kali-build' to USB...
-        copy:
-          src: /home/ominousshell/kali-build/
-          dest: /media/backup/kali-build/
-        become: true
-
-      - name: Backing up 'kali-build' to GitHub...
+        shell: cp -r /home/ominousshell/kali-build/ /media/backup
+      - name: Backing up 'kali-build' to Github...
         shell: |
           git config --global user.email "ominousshellotto@proton.me"
           git add .
-          git commit -m "1.0"
+          git commit -m "1.0" 
           git push
         args:
           chdir: /home/ominousshell/kali-build/
-

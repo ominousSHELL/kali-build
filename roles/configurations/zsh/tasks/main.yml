@@ -1,11 +1,15 @@
 ---
-  - include_vars: /home/ominousshell/kali-build/static_variables.yml
-  - name: Setting Zsh as default shell...
-    shell: echo "{{ PASSWD }}" | sudo -Su ominousshell chsh -s /bin/zsh
-  - name: Setting Zsh configurations...
-    copy:
-        src: "{{ BASE_DIR }}/roles/configurations/zsh/files/.zshrc"
-        dest: /home/ominousshell/.zshrc
+  - name: Setting zsh as the default shell...
+    command:
+      cmd: chsh -s /bin/zsh ominousshell
     become: true
 
+  - name: Configuring zsh...
+    copy:
+      src: /home/ominousshell/kali-build/roles/configurations/zsh/files/.zshrc
+      dest: /home/ominousshell/.zshrc
+      owner: ominousshell
+      group: ominousshell
+      mode: '0644'
+    become: true
 
