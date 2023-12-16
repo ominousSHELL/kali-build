@@ -4,5 +4,6 @@ PACKAGES: [
   "vim",
   "tmux",
   "tree",
-  "flatpak"
+  "flatpak",
+  "xclip"
 ]

@@ -57,6 +57,12 @@ zstyle ':completion:*' regular true
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+#Enable autosuggestions
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
+fi
+
 #Enable syntax-highlighting
 if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 	. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -104,6 +110,7 @@ if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 	ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 fi
 #$Styles, customization and functionality
+
 
 
 #^Aliases
@@ -182,3 +189,4 @@ alias sudo="sudo -E "
 if [ -z "$TMUX" ]; then
     tmux
 fi
+
