@@ -17,7 +17,7 @@
       - name: Backing up 'kali-build' to USB...
         copy:
           src: /home/ominousshell/kali-build/
-          dest: /media/backup/kali-build/
+          dest: /media/backup/Kali-Linux/kali-build/
         become: true
 
       - name: Backing up 'kali-build' to GitHub...
