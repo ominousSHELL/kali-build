@@ -42,5 +42,9 @@ setopt HIST_IGNORE_ALL_DUPS # Don't store duplicate commands
 setopt share_history
 #$History configs
 
+#^Functions
+source '/home/ominousshell/kali-build/roles/configurations/zsh/files/functions/timer.sh'
+source '/home/ominousshell/kali-build/roles/configurations/zsh/files/functions/stop-ports.sh'
+#$Functions
 
 [[ "$TMUX" = "" ]] && tmux

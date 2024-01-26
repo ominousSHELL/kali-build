@@ -9,6 +9,7 @@ bindkey -M vicmd 'X' vi-delete-char
 bindkey -v
 
 bindkey '^[[Z' undo
+bindkey '^[.' insert-last-word
 bindkey '^U' backward-kill-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word

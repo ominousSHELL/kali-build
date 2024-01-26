@@ -12,16 +12,20 @@ alias timer='startTimer'
 alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"
 alias sudo="sudo -E "
 
-#NETCAT PORTS
+#OPENING PORTS
 LISTENING_PORTS=({0..9999})
 for PORT in $LISTENING_PORTS; do
 	alias $PORT="ncat -lnp $PORT "
 done
 
-#CREATING SERVERS
+#STARTING SERVERS
+#WEB SERVERS
 SERVER_PORTS=({0..9999})
 for PORT in $SERVER_PORTS; do
 	alias w-server-$PORT="python -m http.server $PORT"
 done
 
-
+#STOPPING SERVERS
+#for PORT in $SERVER_PORTS; do
+#	alias stop-$PORT="kill -9 $(lsof -i :$PORT | awk '{print $2}' | grep -v PID)"
+#done
