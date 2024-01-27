@@ -1,28 +1,16 @@
 ---
   - name: Configuring vscodium...
     #User settings
-    file:
-      path: /home/ominousshell/.config/VSCodium/User
-      state: absent
-  - name:
-    file:
-      path: /home/ominousshell/.config/VSCodium/User
-      state: directory
+    shell: rm -rf /home/ominousshell/.config/VSCodium/User
   - name:
     unarchive:
-      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodim.zip
+      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodim.tar.gz
       dest: /home/ominousshell/.config/VSCodium/User
 
     #Extensions
   - name:
-    file:
-      path: /home/ominousshell/.vscode-oss/extensions
-      state: absent
+    shell: rm -rf /home/ominousshell/.vscode-oss/extensions/
   - name:
-    file:
-      path: /home/ominousshell/.vscode-oss/extensions
-      state: directory
-  - name:
-      unarchive:
-      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.zip
+    unarchive:
+      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.tar.gz
       dest: /home/ominousshell/.vscode-oss/extensions

@@ -1,13 +1,7 @@
 ---
   - name: Configuring wireshark...
-    file:
-      path: /home/ominousshell/.config/wireshark
-      state: absent
-  - name:
-    file:
-      path: /home/ominousshell/.config/wireshark
-      state: directory
+    shell: rm -rf /home/ominousshell/.config/wireshark/*
   - name:
     unarchive:
-      src: /home/ominousshell/kali-build/roles/setup/applications/wireshark/files/wireshark.zip
+      src: /home/ominousshell/kali-build/roles/setup/applications/wireshark/files/wireshark.tar.gz
       dest: /home/ominousshell/.config/wireshark
