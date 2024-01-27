@@ -12,6 +12,8 @@
       - roles/setup/configurations/vim
       - roles/setup/configurations/zsh
       #Applications
-      - roles/setup/applications/deb
+      - roles/setup/applications/setup-deb
+      - roles/setup/applications/wireshark
+      - roles/setup/applications/vscodium
       #- roles/applications/setup-flatpaks 
 

@@ -9,8 +9,8 @@
       - roles/backup/configurations/vim
       - roles/backup/configurations/sudo
       #Applications
-      #- roles/backup/applications/wireshark
-      #- roles/backup/applications/vscodium
+      - roles/backup/applications/wireshark
+      - roles/backup/applications/vscodium
       #Kali Build
       - roles/backup/kali-build
     become: true
