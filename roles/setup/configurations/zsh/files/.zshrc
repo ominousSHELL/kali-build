@@ -1,24 +1,24 @@
 #Prompt
-source '/home/ominousshell/kali-build/roles/configurations/zsh/files/prompt.sh'
+source '/home/ominousshell/kali-build/roles/setup/configurations/zsh/files/prompt.sh'
 #$Prompt
 
 #^Key binds
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/keybinds.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/keybinds.sh
 #$Key binds##
 
 #^Styles, customzation and functionality
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/style_and_functionality.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/style_and_functionality.sh
 #$Styles, customization and functionality
 
 #^Aliases
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/misc.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/ssh.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/tmux.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/ominousshell.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/nmap.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/ffuf.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/searchsploit.sh
-source /home/ominousshell/kali-build/roles/configurations/zsh/files/aliases/sqlmap.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/misc.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/ssh.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/tmux.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/ominousshell.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/nmap.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/ffuf.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/searchsploit.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/sqlmap.sh
 #$Aliases
 
 #LS_COLORS
@@ -43,8 +43,8 @@ setopt share_history
 #$History configs
 
 #^Functions
-source '/home/ominousshell/kali-build/roles/configurations/zsh/files/functions/tmux-timer.sh'
-source '/home/ominousshell/kali-build/roles/configurations/zsh/files/functions/stop-ports.sh'
+source '/home/ominousshell/kali-build/roles/setup/configurations/zsh/files/functions/tmux-timer.sh'
+source '/home/ominousshell/kali-build/roles/setup/configurations/zsh/files/functions/stop-ports.sh'
 #$Functions
 
 [[ "$TMUX" = "" ]] && tmux

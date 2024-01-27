@@ -2,4 +2,4 @@
   - name: Backing up tmux configuration...
     copy:
       src: /etc/tmux.conf
-      dest: /home/ominousshell/kali-build/roles/configurations/tmux/files/
+      dest: /home/ominousshell/kali-build/roles/setup/configurations/tmux/files/
