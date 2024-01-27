@@ -4,7 +4,7 @@
     shell: rm -rf /home/ominousshell/.config/VSCodium/User/
   - name:
     unarchive:
-      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodim.tar.gz
+      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.tar.gz
       dest: /home/ominousshell/.config/VSCodium/
 
     #Extensions
