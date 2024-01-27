@@ -4,7 +4,7 @@
     archive:
       path: /home/ominousshell/.config/VSCodium/User/
       dest: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.zip
-      format: zip
+      format: tar.gz
     #Extensions
     archive:
       path: /home/ominousshell/.vscode-oss/extensions
