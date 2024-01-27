@@ -2,4 +2,4 @@
   - name: Backing up zsh configuraton...
     copy:
       src: /home/ominousshell/.zshrc
-      dest: /home/ominousshell/kali-build/roles/configurations/zsh/files/
+      dest: /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/

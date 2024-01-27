@@ -2,5 +2,5 @@
   - name: Backing up sudo configuration...
     copy:
       src: /etc/sudoers
-      dest: /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/sudoers
+      dest: /home/ominousshell/kali-build/roles/setup/configurations/kde-desktop/files/sudoers
 

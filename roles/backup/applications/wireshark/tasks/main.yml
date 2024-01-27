@@ -1,2 +1,6 @@
 ---
-# tasks file for wireshark
+  - name: Backing up wireshark...
+    archive:
+      path: /home/ominousshell/.config/wireshark/
+      dest: /home/ominousshell/kali-build/roles/setup/applications/wireshark/files/wireshark.zip
+      format: zip

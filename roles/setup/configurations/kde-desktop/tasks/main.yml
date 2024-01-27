@@ -1,5 +1,5 @@
 ---
-  - name: Install konsave from pip...
+  - name: Installing konsave from pip...
     pip:
       name: konsave
       state: present
@@ -8,7 +8,7 @@
   - name: Configuring KDE Plasma... 
     shell: |
         konsave -r kde-desktop
-        konsave -i /home/ominousshell/kali-build/roles/configurations/kde-desktop/files/kde-desktop.knsv
+        konsave -i /home/ominousshell/kali-build/roles/setup/configurations/kde-desktop/files/kde-desktop.knsv
         konsave -a kde-desktop
     become: true
     become_user: ominousshell

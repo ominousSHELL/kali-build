@@ -1,7 +1,7 @@
 ---
   - name: Configuring vim...
     copy:
-        src: /home/ominousshell/kali-build/roles/configurations/vim/files/.vimrc
+        src: /home/ominousshell/kali-build/roles/setup/configurations/vim/files/.vimrc
         dest: /home/ominousshell/.vimrc
     become: true
 

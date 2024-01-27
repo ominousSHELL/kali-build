@@ -1,6 +1,6 @@
 ---
   - name: Configuring motd...
     copy:
-      src: /home/ominousshell/kali-build/roles/configurations/motd/files/motd
+      src: /home/ominousshell/kali-build/roles/setup/configurations/motd/files/motd
       dest: /etc/motd
     become: true

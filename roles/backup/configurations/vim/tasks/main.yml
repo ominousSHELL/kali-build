@@ -2,4 +2,4 @@
   - name: Backing up vim configuraton...
     copy:
       src: /home/ominousshell/.vimrc
-      dest: /home/ominousshell/kali-build/roles/configurations/vim/files/
+      dest: /home/ominousshell/kali-build/roles/setup/configurations/vim/files/

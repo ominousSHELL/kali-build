@@ -1,6 +1,6 @@
 - name: Configuring sudo...
   copy:
-    src: /home/ominousshell/kali-build/roles/configurations/sudo/files/sudoers
+    src: /home/ominousshell/kali-build/roles/setup/configurations/sudo/files/sudoers
     dest: /etc/sudoers
     mode: '0440'
   become: true

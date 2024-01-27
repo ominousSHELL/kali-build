@@ -1,6 +1,6 @@
 ---
   - name: Configuring tmux...
     copy:
-      src: /home/ominousshell/kali-build/roles/configurations/tmux/files/tmux.conf
+      src: /home/ominousshell/kali-build/roles/setup/configurations/tmux/files/tmux.conf
       dest: /etc/tmux.conf
     become: true

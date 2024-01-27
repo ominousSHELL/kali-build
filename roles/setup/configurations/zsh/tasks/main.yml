@@ -6,7 +6,7 @@
 
   - name: Configuring zsh...
     copy:
-      src: /home/ominousshell/kali-build/roles/configurations/zsh/files/.zshrc
+      src: /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/.zshrc
       dest: /home/ominousshell/.zshrc
       owner: ominousshell
       group: ominousshell
