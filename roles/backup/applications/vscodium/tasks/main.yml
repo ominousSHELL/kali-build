@@ -1,10 +1,8 @@
 ---
   - name: Backing up vscodium...
     #User Settings
-    archive:
-      path: /home/ominousshell/.config/VSCodium/User/
-      dest: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.zip
-      format: gz
+    shell: tar czvf /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.tar.gz /home/ominousshell/.config/VSCodium/User/
+  - name:
     #Extensions
     archive:
       path: /home/ominousshell/.vscode-oss/extensions
