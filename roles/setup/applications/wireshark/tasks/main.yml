@@ -1,6 +1,6 @@
 ---
   - name: Configuring wireshark...
-    shell: rm -rf /home/ominousshell/.config/wireshark/*
+    shell: rm -rf /home/ominousshell/.config/wireshark/
   - name:
     unarchive:
       src: /home/ominousshell/kali-build/roles/setup/applications/wireshark/files/wireshark.tar.gz
