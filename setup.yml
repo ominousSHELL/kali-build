@@ -3,15 +3,15 @@
     hosts: localhost
     roles:
       #Initializations
-      - roles/initialize/packages
+      - roles/setup/initialize/packages
       #Configurations
-      - roles/configurations/kde-desktop
-      - roles/configurations/sudo
-      - roles/configurations/motd
-      - roles/configurations/tmux
-      - roles/configurations/vim
-      - roles/configurations/zsh
+      - roles/setup/configurations/kde-desktop
+      - roles/setup/configurations/sudo
+      - roles/setup/configurations/motd
+      - roles/setup/configurations/tmux
+      - roles/setup/configurations/vim
+      - roles/setup/configurations/zsh
       #Applications
-      - roles/applications/setup-deb
+      - roles/setup/applications/deb
       #- roles/applications/setup-flatpaks 
 

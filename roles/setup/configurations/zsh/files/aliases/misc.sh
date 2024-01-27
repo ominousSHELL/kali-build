@@ -7,7 +7,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
-alias load-functions="source ~/kali-build/roles/configurations/files/functions.sh"
 alias timer='startTimer'
 alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"
 alias sudo="sudo -E "
@@ -19,13 +18,9 @@ for PORT in $LISTENING_PORTS; do
 done
 
 #STARTING SERVERS
-#WEB SERVERS
+#HTTP 
 SERVER_PORTS=({0..9999})
 for PORT in $SERVER_PORTS; do
 	alias w-server-$PORT="python -m http.server $PORT"
 done
 
-#STOPPING SERVERS
-#for PORT in $SERVER_PORTS; do
-#	alias stop-$PORT="kill -9 $(lsof -i :$PORT | awk '{print $2}' | grep -v PID)"
-#done

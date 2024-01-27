@@ -9,23 +9,9 @@
       - roles/backup/configurations/vim
       - roles/backup/configurations/sudo
       #Applications
+      #- roles/backup/applications/wireshark
+      #- roles/backup/applications/vscodium
+      #Kali Build
+      - roles/backup/kali-build
     become: true
-
-  - name: 
-    hosts: localhost
-    tasks:
-      - name: Backing up 'kali-build' to USB...
-        copy:
-          src: /home/ominousshell/kali-build/
-          dest: /media/backup/Kali-Linux/kali-build/
-        become: true
-
-      - name: Backing up 'kali-build' to GitHub...
-        shell: |
-          git config --global user.email "ominousshellotto@proton.me"
-          git add .
-          git commit -m "1.0"
-          git push
-        args:
-          chdir: /home/ominousshell/kali-build/
 
