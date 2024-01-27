@@ -1,2 +1,13 @@
 ---
-# tasks file for vscodium
+  - name: Backing up vscodium...
+    #User Settings
+    archive:
+      path: /home/ominousshell/.config/VSCodium/User
+      dest: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.zip
+      format: zip
+    #Extensions
+    archive:
+      path: /home/ominousshell/.vscode-oss/extensions
+      dest: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.zip
+      format: zip
+

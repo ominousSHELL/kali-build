@@ -1,2 +1,27 @@
 ---
-# tasks file for vscodium
+  - name: Configuring vscodium...
+    #User settings
+    file:
+      path: /home/ominousshell/.config/VSCodium/User
+      state: absent
+  - name:
+    file:
+      path: /home/ominousshell/.config/VSCodium/User
+      state: directory
+  - name:
+    unarchive:
+      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodim.zip
+      dest: /home/ominousshell/.config/VSCodium/User
+
+    #Extensions
+    file:
+      path: /home/ominousshell/.vscode-oss/extensions
+      state: absent
+  - name:
+    file:
+      path: /home/ominousshell/.vscode-oss/extensions
+      state: directory
+  - name:
+    unarchive:
+      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.zip
+      dest: /home/ominousshell/.vscode-oss/extensions

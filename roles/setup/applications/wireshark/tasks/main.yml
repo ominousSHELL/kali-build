@@ -1,2 +1,13 @@
 ---
-# tasks file for wireshark
+  - name: Configuring wireshark...
+    file:
+      path: /home/ominousshell/.config/wireshark
+      state: absent
+  - name:
+    file:
+      path: /home/ominousshell/.config/wireshark
+      state: directory
+  - name:
+    unarchive:
+      src: /home/ominousshell/kali-build/roles/setup/applications/wireshark/files/wireshark.zip
+      dest: /home/ominousshell/.config/wireshark
