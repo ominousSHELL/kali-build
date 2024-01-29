@@ -2,7 +2,7 @@
   - name: Configuring vscodium...
     #User settings
     shell: rm -rf /home/ominousshell/.config/VSCodium/User/
-  - name:
+  - name: 
     unarchive:
       src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.tar.gz
       dest: /home/ominousshell/.config/VSCodium/
@@ -10,7 +10,7 @@
     #Extensions
   - name:
     shell: rm -rf /home/ominousshell/.vscode-oss/extensions/
-  - name:
-    unarchive:
+  - name: 
+    unarchive: 
       src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.tar.gz
       dest: /home/ominousshell/.vscode-oss/

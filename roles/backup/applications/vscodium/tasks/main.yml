@@ -2,7 +2,7 @@
   - name: Backing up vscodium...
     #User Settings
     shell: 'tar -C /home/ominousshell/.config/VSCodium -czvf /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.tar.gz User/'
-  - name: Backing up vscodium extensions...
+  - name: 
     #Extensions
     shell: 'tar -C /home/ominousshell/.vscode-oss/ -czvf /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.tar.gz extensions/'
 
