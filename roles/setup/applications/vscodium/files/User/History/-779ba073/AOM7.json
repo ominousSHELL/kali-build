@@ -1,0 +1,72 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	
+	//Base snippets
+	"env": {
+		 	"prefix": "env",
+		 	"body": [
+		 		"#!/usr/bin/env python",
+		 	],
+	},
+	"env3": {
+		 	"prefix": "env3",
+		 	"body": [
+		 		"#!/usr/bin/env python3",
+		 	],
+	},
+	"import x": {
+		 	"prefix": "im",
+		 	"body": [
+		 		"import $1"
+		 	],
+	},
+	"from x import x": {
+		 	"prefix": "fim",
+		 	"body": [
+		 		"from $1 import $2"
+		 	],
+	},
+	"def": {
+		 	"prefix": "def",
+		 	"body": [
+		 		"def $1($2):",
+				"\t$3"
+		 	],
+	},
+	"for": {
+		 	"prefix": "for",
+		 	"body": [
+		 		"for ${1:i} in $2:",
+				"\t$3"
+		 	],
+	},
+	"while": {
+		 	"prefix": "while",
+		 	"body": [
+		 		"while $1:",
+				"\t$2"
+		 	],
+	},
+	"try": {
+		 	"prefix": "try",
+		 	"body": [
+		 		"try:",
+				"\t$1",
+				"except Exception as e:"
+				"\t$2"
+		 	],
+	}
+
+}

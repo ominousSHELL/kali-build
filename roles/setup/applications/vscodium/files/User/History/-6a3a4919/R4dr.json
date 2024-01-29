@@ -1,0 +1,29 @@
+{
+  //^VSCodium
+  "editor.fontSize": 12,
+  "editor.fontFamily": "'Fira Code', Droid Sans Mono",
+  "terminal.integrated.fontSize": 12,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.cursorSurroundingLines": 10,
+  //$VSCodium
+
+  //^Vim
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+
+  // To improve performance",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  }
+  //$Vim
+}
+
