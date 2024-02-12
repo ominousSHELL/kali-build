@@ -1,0 +1,62 @@
+Primary:
+    Forensics
+    IoT Hacking
+    Web Hacking
+    Cloud Hacking
+    System Hacking
+    Mobile Hacking
+    Network Hacking
+    Hardware Hacking
+    Wireless Hacking
+    Password Hacking
+    Database Hacking
+    Social Engineering
+    Reverse Engineering
+
+Secondary:
+    Forensics:
+        - Carving Tools 
+        - Imaging Tools
+        - PDF Tools
+        - Sleuth Kit Suite
+    IoT Hacking:
+        - N/A
+    Web Hacking:
+        - CMS & Framework Identification
+        - Web Application Proxies
+        - Web Crawlers & Directory Bruteforce
+        - Web Vulnerability Scanners
+    Cloud Hacking:
+        - N/A
+    Mobile Hacking:
+        - N/A
+    Network Hacking:
+        - Network and Port Scanners
+        - Live Host Identification
+        - IDS/IPS Identification    
+        - Protocol Analysis
+        - Lateral Movement
+        - Sniffing and Spoofing
+    Database Hacking:
+        - N/A
+    Hardware Hacking:
+        - JTAG Tools
+        - Firmware Analysis
+    Wireless Hacking:
+        - Bluetooth Tools
+        - WiFi Tools
+    Social Engineering:
+        - Phising Tools
+        - Spoofing Tools
+        - Credential Harvesting Tools
+    Reverse Engineering:
+        - N/A
+    Password Hacking:
+        - Offline
+        - Online
+        - Pass the Hash Tools
+        - Password Profiling and Wordlists
+        - Cryptography
+    System Hacking:
+        - Payload Generators
+        - Exploitation Frameworks
