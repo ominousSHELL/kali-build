@@ -8,9 +8,5 @@
       dest: /home/ominousshell/.config/VSCodium/
 
     #Extensions
-  - name:
-    shell: rm -rf /home/ominousshell/.vscode-oss/extensions/
-  - name: 
-    unarchive: 
-      src: /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extensions.tar.gz
-      dest: /home/ominousshell/.vscode-oss/
+  - name: Configuring vscodium extensions...
+    shell: cat /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extension.txt | xargs -L 1 codium --no-sandbox --user-data-dir /home/ominousshell/ --install-extension
