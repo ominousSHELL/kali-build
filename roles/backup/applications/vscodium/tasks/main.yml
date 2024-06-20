@@ -1,8 +1,0 @@
----
-  - name: Backing up vscodium...
-    #User Settings
-    shell: 'tar --exclude="User/globalStorage" --exclude="User/workspaceStorage" --exclude="User/History" -C /home/ominousshell/.config/VSCodium -cJvf /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/vscodium.tar.xz User/'
-  - name: Backing up vscodium extensions...
-    #Extensions
-    shell: codium --list-extensions --no-sandbox --user-data-dir /home/ominousshell/ > /home/ominousshell/kali-build/roles/setup/applications/vscodium/files/extension.txt
-

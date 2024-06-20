@@ -10,7 +10,7 @@
       - roles/backup/configurations/sudo
       #Applications
       - roles/backup/applications/wireshark
-      - roles/backup/applications/vscodium
+      - roles/backup/applications/vscode
       #Kali Build
       - roles/backup/kali-build
     become: true

@@ -1,0 +1,12 @@
+---
+  - name: Configuring vscode...
+    #User settings
+    shell: rm -rf /home/ominousshell/.config/Code/User/
+  - name: 
+    unarchive:
+      src: /home/ominousshell/kali-build/roles/setup/applications/vscode/files/vscode.tar.xz
+      dest: /home/ominousshell/.config/Code/
+
+    #Extensions
+  - name: Configuring vscode extensions...
+    shell: cat /home/ominousshell/kali-build/roles/setup/applications/vscode/files/extension.txt | xargs -L 1 code --no-sandbox --user-data-dir /home/ominousshell/ --install-extension

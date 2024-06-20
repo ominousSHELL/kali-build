@@ -13,7 +13,7 @@
       - roles/setup/configurations/zsh
       #Applications
       - roles/setup/applications/wireshark
-      - roles/setup/applications/vscodium
+      - roles/setup/applications/vscode
       - roles/setup/applications/setup-deb
       #- roles/applications/setup-flatpaks 
 
