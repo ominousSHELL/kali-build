@@ -19,6 +19,7 @@ source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliase
 source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/ffuf.sh
 source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/searchsploit.sh
 source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/sqlmap.sh
+source /home/ominousshell/kali-build/roles/setup/configurations/zsh/files/aliases/hydra.sh
 #$Aliases
 
 #LS_COLORS

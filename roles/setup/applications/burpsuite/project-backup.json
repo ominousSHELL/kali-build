@@ -1,4 +1,18 @@
 {
+    "bambda":{
+        "http_history_display_filter":{
+            "bambda":"return true;"
+        },
+        "logger_capture_filter":{
+            "bambda":"return true;"
+        },
+        "logger_display_filter":{
+            "bambda":"return true;"
+        },
+        "web_sockets_history_display_filter":{
+            "bambda":"return true;"
+        }
+    },
     "logger":{
         "capture_filter":{
             "by_mime_type":{
@@ -39,6 +53,7 @@
             },
             "capture_enabled":true,
             "capture_memory_limit_mb":100,
+            "filter_mode":"SETTINGS",
             "limit_request_response_size":{
                 "capture_requests_up_to":"1MB",
                 "capture_responses_up_to":"1MB"
@@ -105,7 +120,8 @@
                 "show_scanner":true,
                 "show_sequencer":true,
                 "show_target":true
-            }
+            },
+            "filter_mode":"SETTINGS"
         }
     },
     "organiser":{
@@ -351,12 +367,19 @@
                 "show_only_in_scope_items":false,
                 "show_only_parameterized_requests":false
             },
+            "by_search":{
+                "case_sensitive":false,
+                "negative_search":false,
+                "regex":false,
+                "term":""
+            },
             "by_status_code":{
                 "show_2xx":true,
                 "show_3xx":true,
                 "show_4xx":true,
                 "show_5xx":true
-            }
+            },
+            "filter_mode":"SETTINGS"
         },
         "intercept_client_requests":{
             "automatically_fix_missing_or_superfluous_new_lines_at_end_of_request":false,
@@ -388,6 +411,13 @@
                     "enabled":false,
                     "match_relationship":"is_in_target_scope",
                     "match_type":"url"
+                },
+                {
+                    "boolean_operator":"and",
+                    "enabled":true,
+                    "match_condition":"hackthebox.com|hackthebox.eu",
+                    "match_relationship":"in_request_does_not_match",
+                    "match_type":"any_header"
                 }
             ]
         },
@@ -537,6 +567,7 @@
             "suppress_burp_error_messages_in_browser":false,
             "unpack_gzip_deflate_in_requests":false,
             "unpack_gzip_deflate_in_responses":true,
+            "use_http1_keep_alive":true,
             "use_http_10_in_requests_to_server":false,
             "use_http_10_in_responses_to_client":false
         },
@@ -563,6 +594,7 @@
             "unhide_hidden_form_fields":false
         },
         "ssl_pass_through":{
+            "apply_to_out_of_scope_items":true,
             "automatically_add_entries_on_client_ssl_negotiation_failure":false,
             "rules":[]
         },
@@ -578,7 +610,14 @@
                 "hide_incoming_messages":false,
                 "hide_outgoing_messages":false,
                 "show_only_in_scope_items":false
-            }
+            },
+            "by_search":{
+                "case_sensitive":false,
+                "negative_search":false,
+                "regex":false,
+                "term":""
+            },
+            "filter_mode":"SETTINGS"
         }
     },
     "repeater":{

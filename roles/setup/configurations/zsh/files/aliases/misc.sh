@@ -10,6 +10,9 @@ alias diff='diff --color=auto'
 alias timer='startTimer'
 alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"
 alias sudo="sudo -E "
+alias add-host="~/ominousSHELL/scripts/misc/add-host.sh"
+alias remove-host="sudo sed -i '\$d' /etc/hosts"
+
 
 #OPENING PORTS
 LISTENING_PORTS=({0..9999})
