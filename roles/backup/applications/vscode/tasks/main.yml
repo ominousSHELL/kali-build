@@ -4,5 +4,5 @@
     shell: 'tar --exclude="User/globalStorage" --exclude="User/workspaceStorage" --exclude="User/History" -C /home/ominousshell/.config/Code -cJvf /home/ominousshell/kali-build/roles/setup/applications/vscode/files/vscode.tar.xz User/'
   - name: Backing up vscode extensions...
     #Extensions
-    shell: code --list-extensions --no-sandbox --user-data-dir /home/ominousshell/ > /home/ominousshell/kali-build/roles/setup/applications/vscode/files/extension.txt
+    shell: code --list-extensions --no-sandbox --user-data-dir /home/ominousshell/.config/Code/ > /home/ominousshell/kali-build/roles/setup/applications/vscode/files/extension.txt
 

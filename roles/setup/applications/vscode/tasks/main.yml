@@ -9,4 +9,4 @@
 
     #Extensions
   - name: Configuring vscode extensions...
-    shell: cat /home/ominousshell/kali-build/roles/setup/applications/vscode/files/extension.txt | xargs -L 1 code --no-sandbox --user-data-dir /home/ominousshell/ --install-extension
+    shell: cat /home/ominousshell/kali-build/roles/setup/applications/vscode/files/extension.txt | xargs -L 1 code --no-sandbox --user-data-dir /home/ominousshell/.config/Code --install-extension

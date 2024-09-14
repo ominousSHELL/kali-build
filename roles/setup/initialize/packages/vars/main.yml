@@ -6,5 +6,7 @@ PACKAGES: [
   "tree",
   "flatpak",
   "xclip",
-  "btop"
+  "btop",
+  "seclists",
+  "awscli"
 ]

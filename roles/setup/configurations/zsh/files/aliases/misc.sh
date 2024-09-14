@@ -12,12 +12,13 @@ alias log-out="qdbus org.kde.ksmserver /KSMServer logout 1 0 2"
 alias sudo="sudo -E "
 alias add-host="~/ominousSHELL/scripts/misc/add-host.sh"
 alias remove-host="sudo sed -i '\$d' /etc/hosts"
+alias ominous-kit-init="~/ominousSHELL/ominous-kit/ominous-kit-init.sh"
 
 
 #OPENING PORTS
 LISTENING_PORTS=({0..9999})
 for PORT in $LISTENING_PORTS; do
-	alias $PORT="ncat -lnp $PORT "
+	alias $PORT="nc -lnp $PORT "
 done
 
 #STARTING SERVERS

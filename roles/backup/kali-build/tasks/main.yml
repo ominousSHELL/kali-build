@@ -9,7 +9,7 @@
   - name: Backing up 'kali-build' to GitHub...
     git_config:
       name: user.email
-      value: "ominousshell@proton.me"
+      value: "ominoussheII@proton.me"
       scope: global
   - name: 
     shell: "git add . && git commit -m '1.0' && git push"
