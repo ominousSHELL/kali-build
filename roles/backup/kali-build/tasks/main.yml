@@ -1,10 +1,10 @@
 ---
   - name: Backing up 'kali-build' to USB...
-    shell: rm -rf "/home/ominousshell/es/Kali Linux/kali-build/"
+    shell: rm -rf "/home/ominousshell/es/kali-build/"
   - name:
     copy:
       src: /home/ominousshell/kali-build/ 
-      dest: "/home/ominousshell/es/Kali Linux/kali-build/"
+      dest: "/home/ominousshell/es/kali-build/"
 
   - name: Backing up 'kali-build' to GitHub...
     git_config:
